@@ -16,15 +16,12 @@ public class Day02_NavigationOdev {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\asus\\Documents\\Selenium dependencies\\drives\\chromedriver.exe");
 
         WebDriver webDriver = new ChromeDriver();
-        webDriver.get("https://google.com");
-        webDriver.get("https://youtube.com");//webDriver.navigate("https://youtube.com"); olarak da yazilabilir
+        webDriver.get("http://googlr.com");
+        webDriver.get("http://youtube.com");
         webDriver.navigate().back();
         webDriver.navigate().forward();
         webDriver.navigate().refresh();
         webDriver.quit();
-
-
-
 
 
     }

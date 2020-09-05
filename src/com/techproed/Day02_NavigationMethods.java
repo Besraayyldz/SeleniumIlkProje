@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Day02_NavigationMethods {
     public static void main(String[] args) {
 
-        //driveri miza yavayi tanittik
+        //driver'imiza java'yi tanittik
         System.setProperty("webdriver.chrome.driver","C:\\Users\\asus\\Documents\\Selenium dependencies\\drives\\chromedriver.exe");
 
         WebDriver webDriver = new ChromeDriver();//driveri acar
@@ -17,7 +17,6 @@ public class Day02_NavigationMethods {
         webDriver.navigate().to("https://amazon.com");//tanimlanan sayfata gider
 
         //s: string manasina geliyor.
-        //yukardaki iki komut ayni anlama geliyor.
 
         webDriver.navigate().back();//.navigate().back() onceki sayfaya geri dinme islemini gerceklestirir
 

@@ -6,6 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Day02_TitleUrlTest {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\asus\\Documents\\Selenium dependencies\\drives\\chromedriver.exe");
+        //1- youtube.com a gidin
+        //2- title'inda video kelimesinin gecip gevmedigine bakin
+        //3- sayfayi kapatin
 
         WebDriver driver = new ChromeDriver();
         driver.get("http://youtube.com");
@@ -17,13 +20,6 @@ public class Day02_TitleUrlTest {
             System.out.println("Video kelimesi icermiyor");
         }
         driver.quit();
-
-
-
-
-
-
-
 
     }
 }

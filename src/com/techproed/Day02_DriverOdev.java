@@ -3,12 +3,12 @@ package com.techproed;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class day02_DriverOdev {
+public class Day02_DriverOdev {
     public static void main(String[] args) {
         // 1- driver'ımızı ekranı kaplayacak şekilde kullanalım.
         // 2- ilk önce google.com'a gidelim.
         // 3- sayfanın title'ını alalım ve ekrana yazdıralım.
-        // 4- daha sonra youtube.com'a gidelim.
+        // 4- daha sonra youtube.com'a gidelim ve sayfayi yenileyelim
         // 5- sayfanın title'ını ve url'ini alalım ekrana yazdıralım.
         // 6- google.com'a geri gelelim ve sayfanın url'ini alıp ekrana yazdıralım.
         // 7- driver'ımızı kapatalım.
@@ -30,14 +30,19 @@ public class day02_DriverOdev {
         // 4- daha sonra youtube.com'a gidelim.
         webDriver.navigate().to("https://youtube.com");
 
+        //ve sayfayi yenileyelim
+        webDriver.navigate().refresh();
+
         // 5- sayfanın title'ını ve url'ini alalım ekrana yazdıralım.
         String youtubeTitle = webDriver.getTitle();
         System.out.println(youtubeTitle);
         String youtubeUrl = webDriver.getCurrentUrl();
         System.out.println(youtubeUrl);
 
-        // 6- google.com'a geri gelelim ve sayfanın url'ini alıp ekrana yazdıralım.
+        // 6- google.com'a geri gelelim
         webDriver.navigate().back();
+
+        //ve sayfanın url'ini alıp ekrana yazdıralım.
         String sayfaUrl2 = webDriver.getCurrentUrl();
         System.out.println(sayfaUrl2);
 

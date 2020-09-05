@@ -13,12 +13,12 @@ public class Day02_IfElse {
 
         //title de Car varmi yok mu bak (title:baslik)
         //contains -> bir kelimenin bir metin icersinde gecip gecmedigini belirler
-        String amazonTitle = driver.getTitle();//car kelimesi var mi diye bak
+        String amazonTitle = driver.getTitle();
 
-        if(amazonTitle.contains("Car")){
-            System.out.println("Car kelimesini iceriyor");
+        if(amazonTitle.contains("Car")){ //car kelimesi var mi diye bak
+            System.out.println("Car kelimesini iceriyor"); //iceriyorsa bunu yaz
         }else{
-            System.out.println("Car kelimesi icermiyor");
+            System.out.println("Car kelimesi icermiyor"); //icermiyorsa bunu yaz
         }
         driver.quit();
 
