@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
-public class Day04_LocatorLinkTest {
+public class Day05_Xpath02 {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\asus\\Documents\\Selenium dependencies\\drives\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -14,12 +14,9 @@ public class Day04_LocatorLinkTest {
         driver.manage().window().maximize();
         driver.get("http://a.testaddressbook.com/");
 
-        WebElement signInLink = driver.findElement(By.linkText("Sign in"));
-        signInLink.click();
-        WebElement homeLink = driver.findElement(By.partialLinkText("H"));
-        homeLink.click();
-
-
+        //atribute'u olmayan bir webelement nasil bulunur? cevap: xpath ile sadece taqNamesini yazariz
+        WebElement walcomeYazisi = driver.findElement(By.xpath("//h1"));
+        System.out.println(walcomeYazisi.getText());
 
     }
 }

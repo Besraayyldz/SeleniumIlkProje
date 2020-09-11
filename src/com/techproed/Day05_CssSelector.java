@@ -6,20 +6,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
-public class Day04_LocatorLinkTest {
+public class Day05_CssSelector {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\asus\\Documents\\Selenium dependencies\\drives\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("http://a.testaddressbook.com/");
+        driver.get("http://a.testaddressbook.com/sign_in");
 
-        WebElement signInLink = driver.findElement(By.linkText("Sign in"));
-        signInLink.click();
-        WebElement homeLink = driver.findElement(By.partialLinkText("H"));
-        homeLink.click();
+        WebElement emailKutusu = driver.findElement(By.cssSelector("input.form-control"));
+        emailKutusu.sendKeys("testtechproed@gmail.com");
 
+        WebElement sifreKutusu = driver.findElement(By.cssSelector("#session_password"));
+        sifreKutusu.sendKeys("Test1234!");
 
+        WebElement signInButonu = driver.findElement(By.cssSelector("input[name='commit']"));
+       signInButonu.click();
 
+       //yada bu son iki satiri yazmayip sifreKutusu.submit();
     }
 }
